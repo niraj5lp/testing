@@ -1,0 +1,16 @@
+<Schema name="New Schema1">
+  <Cube name="New Cube 0" visible="true" cache="true" enabled="true">
+    <Table name="date_one" alias="date">
+    </Table>
+    <Dimension type="StandardDimension" visible="true" foreignKey="id" name="id_number">
+      <Hierarchy name="New Hierarchy 0" visible="true" hasAll="true" primaryKeyTable="etl_jobs">
+        <Level name="New Level 0" visible="true" column="id" uniqueMembers="false">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Measure name="month" column="month" datatype="Numeric" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="quater" column="quarter" datatype="Numeric" aggregator="count" visible="true">
+    </Measure>
+  </Cube>
+</Schema>
